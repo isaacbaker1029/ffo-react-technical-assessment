@@ -26,6 +26,9 @@ const getSentimentText = (rating) => {
 
 const RatingSentiment = ({ rating }) => {
     const text = getSentimentText(rating);
+    if (!text) {
+        return null;
+    }
     return <SentimentWrapper>{text}</SentimentWrapper>;
 };
 
