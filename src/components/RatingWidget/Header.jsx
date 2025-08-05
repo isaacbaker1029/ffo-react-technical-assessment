@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Stars from './Stars.jsx';
 import RatingSentiment from './RatingSentiment.jsx';
-import feefoLogo from '../assets/feefo-logo.png';
+import feefoLogo from '../../assets/feefo-logo.png';
 
 const HeaderWrapper = styled.div`
   display: flex;

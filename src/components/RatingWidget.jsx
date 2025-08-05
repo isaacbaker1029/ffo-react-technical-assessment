@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Header from "./Header.jsx";
-import RatingDistribution from "./RatingDistribution.jsx";
+import Header from "./RatingWidget/Header.jsx";
+import RatingDistribution from "./RatingWidget/RatingDistribution.jsx";
 
 const WidgetWrapper = styled.div`
   background-color: white;
