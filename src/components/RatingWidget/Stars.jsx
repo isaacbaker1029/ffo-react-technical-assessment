@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Star from './Star.jsx';
+import PropTypes from 'prop-types';
 
 const StarsContainer = styled.div`
   display: flex;
@@ -22,6 +23,10 @@ const Stars = ({ rating }) => {
     });
 
     return <StarsContainer>{starElements}</StarsContainer>;
+};
+
+Stars.propTypes = {
+    rating: PropTypes.number
 };
 
 export default Stars;

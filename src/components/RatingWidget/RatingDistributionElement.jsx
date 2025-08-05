@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const ElementWrapper = styled.div`
   display: flex;
@@ -51,6 +52,12 @@ const RatingDistributionElement = ({ stars, count, totalReviews }) => {
       <Count>{count}</Count>
     </ElementWrapper>
   );
+};
+
+RatingDistributionElement.propTypes = {
+    stars: PropTypes.number.isRequired,
+    count: PropTypes.number.isRequired,
+    totalReviews: PropTypes.number.isRequired
 };
 
 export default RatingDistributionElement;

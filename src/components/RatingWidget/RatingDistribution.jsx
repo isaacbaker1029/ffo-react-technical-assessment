@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import RatingDistributionElement from "./RatingDistributionElement.jsx";
+import PropTypes from 'prop-types';
 
 const DistributionWrapper = styled.div`
   padding: 16px;
@@ -21,6 +22,14 @@ const RatingDistribution = ({ distribution, totalReviews }) => {
       ))}
     </DistributionWrapper>
   );
+};
+
+RatingDistribution.propTypes = {
+    distribution: PropTypes.arrayOf(PropTypes.shape({
+        stars: PropTypes.number.isRequired,
+        count: PropTypes.number.isRequired
+    })).isRequired,
+    totalReviews: PropTypes.number.isRequired
 };
 
 export default RatingDistribution;

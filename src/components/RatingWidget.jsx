@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Header from "./RatingWidget/Header.jsx";
 import RatingDistribution from "./RatingWidget/RatingDistribution.jsx";
+import PropTypes from 'prop-types';
 
 const WidgetWrapper = styled.div`
   background-color: white;
@@ -24,6 +25,14 @@ const RatingWidget = ({ reviewData }) => {
             />
         </WidgetWrapper>
     );
+};
+
+RatingWidget.propTypes = {
+    reviewData: PropTypes.shape({
+        averageRating: PropTypes.number,
+        totalReviews: PropTypes.number,
+        distribution: PropTypes.array
+    }).isRequired
 };
 
 export default RatingWidget;

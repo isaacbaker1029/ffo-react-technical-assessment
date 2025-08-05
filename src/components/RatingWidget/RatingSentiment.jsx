@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const SentimentWrapper = styled.p`
   font-size: 1.7em;
@@ -30,6 +31,10 @@ const RatingSentiment = ({ rating }) => {
         return null;
     }
     return <SentimentWrapper>{text}</SentimentWrapper>;
+};
+
+RatingSentiment.propTypes = {
+    rating: PropTypes.number
 };
 
 export default RatingSentiment;

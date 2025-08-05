@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const StarContainer = styled.div`
   position: relative;
@@ -41,6 +42,10 @@ const Star = ({ fillPercentage }) => {
             <StarIcon>★</StarIcon>
         </StarContainer>
     );
+};
+
+Star.propTypes = {
+    fillPercentage: PropTypes.number.isRequired
 };
 
 export default Star;

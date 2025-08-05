@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Stars from './Stars.jsx';
 import RatingSentiment from './RatingSentiment.jsx';
 import feefoLogo from '../../assets/feefo-logo.png';
+import PropTypes from 'prop-types';
 
 const HeaderWrapper = styled.div`
   display: flex;
@@ -60,6 +61,10 @@ const Header = ({ averageRating }) => {
             </Footer>
         </HeaderWrapper>
     );
+};
+
+Header.propTypes = {
+    averageRating: PropTypes.number
 };
 
 export default Header;
