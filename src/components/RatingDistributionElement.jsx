@@ -19,7 +19,7 @@ const ProgressBarContainer = styled.div`
   flex-grow: 1;
   height: 12px;
   background-color: #E0E0E0;
-  border-radius: 6px;
+  border-radius: 2px;
   margin: 0 12px;
   overflow: hidden;
 `;
@@ -28,13 +28,14 @@ const ProgressBarFill = styled.div`
   height: 100%;
   background-color: #ffc107; // Yellow color from the design
   width: ${props => props.$width}%;
-  border-radius: 6px;
+  border-radius: 2px;
 `;
 
 const Count = styled.span`
   color: #A0A0A0;
   width: 40px; // Gives space for the number
-  text-align: right;
+  text-align: left;
+  margin-left: 8px;
 `;
 
 

@@ -2,11 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SentimentWrapper = styled.p`
-  font-size: 1.2em;
+  font-size: 1.7em;
   font-weight: 600;
-  color: black;
+  color: #555555;
+  letter-spacing: 2px;
   margin: 4px 0;
   text-align: center;
+  text-transform: uppercase;
 `;
 
 const getSentimentText = (rating) => {

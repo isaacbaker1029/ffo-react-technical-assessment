@@ -10,22 +10,16 @@ const StarsContainer = styled.div`
 `;
 
 const Stars = ({ rating }) => {
-    const starElements = [];
-
-    for (let i = 1; i <= 5; i++) {
+    const starElements = Array.from({ length: 5 }, (_, index) => {
+        const starNumber = index + 1;
         let fillPercentage = 0;
-        if (i <= rating) {
-            // This star should be full
+        if (starNumber <= rating) {
             fillPercentage = 100;
-        } else if (i > rating && (i - 1) < rating) {
-            // This is the partially filled star
-            // rating % 1 gives us the decimal part (e.g., 4.6 % 1 = 0.6)
+        } else if (starNumber > rating && (starNumber - 1) < rating) {
             fillPercentage = (rating % 1) * 100;
         }
-        // Otherwise, the fill remains 0 for empty stars
-
-        starElements.push(<Star key={i} fillPercentage={fillPercentage} />);
-    }
+        return <Star key={starNumber} fillPercentage={fillPercentage} />;
+    });
 
     return <StarsContainer>{starElements}</StarsContainer>;
 };

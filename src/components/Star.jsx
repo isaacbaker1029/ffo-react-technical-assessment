@@ -4,8 +4,8 @@ import styled from 'styled-components';
 const StarContainer = styled.div`
   position: relative;
   display: inline-block;
-  width: 40px;  /* Control the size of the box */
-  height: 40px;
+  width: 50px;  /* Control the size of the box */
+  height: 50px;
   margin: 0 2px;
   border-radius: 8px; /* The rounded corners for the box */
   background-color: #e0e0e0; /* The gray background */
