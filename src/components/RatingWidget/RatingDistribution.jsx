@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const DistributionWrapper = styled.div`
   padding: 16px;
   width: 100%;
-  box-sizing: border-box; // Ensures padding doesn't add to the width
+  box-sizing: border-box;
 `;
 
 const RatingDistribution = ({ distribution, totalReviews }) => {

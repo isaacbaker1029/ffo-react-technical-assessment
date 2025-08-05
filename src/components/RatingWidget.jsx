@@ -7,8 +7,7 @@ import PropTypes from 'prop-types';
 const WidgetWrapper = styled.div`
   background-color: white;
   border-radius: 24px;
-  width: 375px;
-  max-width: 550px; /* This controls the size of the widget */
+  width: clamp(320px, 92vw, 400px);
   overflow: hidden;
   border: 1px solid lightgray;
 `;

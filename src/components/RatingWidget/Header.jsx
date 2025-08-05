@@ -7,8 +7,8 @@ import PropTypes from 'prop-types';
 
 const HeaderWrapper = styled.div`
   display: flex;
-  flex-direction: column; /* Stack all items vertically */
-  align-items: center;    /* Center them horizontally */
+  flex-direction: column;
+  align-items: center; 
   padding: 32px 16px 8px 16px;
 `;
 

@@ -11,7 +11,7 @@ const ElementWrapper = styled.div`
 
 const Label = styled.span`
   color: #A0A0A0;
-  width: 40px; // Gives space for "5 ★"
+  width: 40px;
   text-align: left;
   text-align-last: center;
 `;
@@ -27,7 +27,7 @@ const ProgressBarContainer = styled.div`
 
 const ProgressBarFill = styled.div`
   height: 100%;
-  background-color: #ffc107; // Yellow color from the design
+  background-color: #ffc107;
   width: ${props => props.$width}%;
   border-radius: 2px;
 `;
@@ -45,11 +45,19 @@ const RatingDistributionElement = ({ stars, count, totalReviews }) => {
 
   return (
     <ElementWrapper>
-      <Label>{stars} ★</Label>
-      <ProgressBarContainer>
-        <ProgressBarFill $width={percentage} />
-      </ProgressBarContainer>
-      <Count>{count}</Count>
+        {/* aria-hidden tells screen readers to ignore these visual-only elements */}
+        <Label aria-hidden="true">{stars} ★</Label>
+        <ProgressBarContainer>
+            <ProgressBarFill
+                $width={percentage}
+                role="progressbar"
+                aria-valuenow={count}
+                aria-valuemin="0"
+                aria-valuemax={totalReviews}
+                aria-label={`${stars} star rating: ${count} of ${totalReviews} total reviews`}
+            />
+        </ProgressBarContainer>
+        <Count aria-hidden="true">{count}</Count>
     </ElementWrapper>
   );
 };

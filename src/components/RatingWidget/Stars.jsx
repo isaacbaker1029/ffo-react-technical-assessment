@@ -22,7 +22,13 @@ const Stars = ({ rating }) => {
         return <Star key={starNumber} fillPercentage={fillPercentage} />;
     });
 
-    return <StarsContainer>{starElements}</StarsContainer>;
+    return (
+        <div role="img" aria-label={`Rating: ${rating} out of 5 stars.`}>
+            <StarsContainer>
+                {starElements}
+            </StarsContainer>
+        </div>
+    );
 };
 
 Stars.propTypes = {

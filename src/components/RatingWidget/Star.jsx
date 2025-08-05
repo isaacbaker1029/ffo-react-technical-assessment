@@ -5,12 +5,12 @@ import PropTypes from 'prop-types';
 const StarContainer = styled.div`
   position: relative;
   display: inline-block;
-  width: 50px;  /* Control the size of the box */
+  width: 50px;
   height: 50px;
   margin: 0 2px;
-  border-radius: 8px; /* The rounded corners for the box */
-  background-color: #e0e0e0; /* The gray background */
-  overflow: hidden; /* This is important to keep the rounded corners */
+  border-radius: 8px;
+  background-color: #e0e0e0;
+  overflow: hidden;
 `;
 
 const StarFill = styled.div`
@@ -18,8 +18,8 @@ const StarFill = styled.div`
   top: 0;
   left: 0;
   height: 100%;
-  background-color: #ffc107; /* The yellow fill */
-  width: ${props => props.percentage}%; /* The 'wrapper thing' to control fill */
+  background-color: #ffc107;
+  width: ${props => props.percentage}%;
 `;
 
 const StarIcon = styled.span`
@@ -27,9 +27,9 @@ const StarIcon = styled.span`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white; /* The silver-grayish star in the center */
-  font-size: 30px; /* Adjust size of star to fit in the box */
-  -webkit-text-stroke: 1px white; /* Optional: adds a thin white border to the star */
+  color: white; 
+  font-size: 30px;
+  -webkit-text-stroke: 1px white;
   text-stroke: 1px white;
 `;
 
